@@ -6,7 +6,7 @@ export const Main = styled.main`
   width: 800px;
   height: 495px;
   margin-left: 360px;
-  font-size: 21.72px;
+  font-size: 15px;
   table {
     border: 1px black solid;
   }
