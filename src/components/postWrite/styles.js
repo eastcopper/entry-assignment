@@ -13,6 +13,7 @@ export const Main = styled.main`
     font-size: 15px;
     padding-left: 10px;
     font-size: 15px;
+    resize: none;
   }
   .title {
     width: 800px;
