@@ -7,8 +7,7 @@ export default function Header() {
     <>
       <S.Header>
         <span className="post">게시물 보기</span>
-        <span className="post">
-        <Link to="/write">게시물 등록</Link></span>
+        <Link to="/write"className="post">게시물 등록</Link>
         <button className="login">로그인</button>
       </S.Header>
     </>
