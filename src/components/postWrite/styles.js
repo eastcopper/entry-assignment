@@ -29,13 +29,14 @@ export const Main = styled.main`
     justify-content: flex-end;
     margin: 5px;
   }
-  .writeBtn {
-    border-radius: 24px;
-    width: 100px;
-    height: 40px;
-    background-color: #386bee;
-    color: #ffffff;
-    border: 0px;
-    font-size: 15px;
-  }
+`;
+
+export const Button = styled.button`
+  border-radius: 24px;
+  width: 100px;
+  height: 40px;
+  background-color: #386bee;
+  color: #ffffff;
+  border: 0px;
+  font-size: 15px;
 `;
