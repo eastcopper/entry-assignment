@@ -1,7 +1,7 @@
 import PostDetail from "./components/postDetail";
 import PostList from "./components/postList";
 import PostWrite from "./components/postWrite";
-import {BrowserRouter, Route, Switch} from "react-router-dom"
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
   return (

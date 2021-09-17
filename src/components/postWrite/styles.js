@@ -24,11 +24,6 @@ export const Main = styled.main`
     width: 800px;
     height: 430px;
   }
-  /* .content::placeholder {
-      position: absolute;
-      left: 10px;
-      top: 10px;
-  } */
   .write {
     display: flex;
     justify-content: flex-end;
