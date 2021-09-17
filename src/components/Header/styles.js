@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
-  margin-bottom: 105px;
+  margin-bottom: 50px;
   height: 55px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  color: #000000;
   .login {
     margin-left: 35px;
     margin-right: 320px;
@@ -18,5 +19,9 @@ export const Header = styled.header`
   }
   .post {
     margin-left: 22px;
+    text-decoration: none;
+  }
+  .post:visited {
+    color: #000000;
   }
 `;
