@@ -1,6 +1,6 @@
-import * as S from "../postDetail/styles";
+import * as S from "./styles";
 import React from "react";
-import Header from "../Header";
+import Header from "../header/Header";
 
 export default function PostDetail() {
   let writer = true;

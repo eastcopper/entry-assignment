@@ -1,6 +1,6 @@
 import * as S from "../postList/styles";
 import React from "react";
-import Header from "../Header";
+import Header from "../header/Header";
 
 export default function PostList() {
   return (
