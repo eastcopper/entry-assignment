@@ -29,14 +29,17 @@ export const Main = styled.main`
     justify-content: flex-end;
     margin: 5px;
   }
-`;
-
-export const Button = styled.button`
-  border-radius: 24px;
-  width: 100px;
-  height: 40px;
-  background-color: #386bee;
-  color: #ffffff;
-  border: 0px;
-  font-size: 15px;
+  button {
+    border-radius: 24px;
+    width: 100px;
+    height: 40px;
+    background-color: #EDEDED;
+    font-size: 15px;
+    border: 0px;
+  }
+  button:hover {
+    background-color: #386bee;
+    color: #ffffff;
+    cursor: pointer;
+  }
 `;
