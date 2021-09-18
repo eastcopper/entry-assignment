@@ -3,9 +3,10 @@ import * as S from "./styles";
 import { useDispatch, useSelector } from "react-redux";
 import PostList from "../components/postList/postList";
 import Input from "../components/postWrite/postWrite";
-import { boardRemove, boardSave, boardSelectRow } from "../module/boardReducer";
+import { boardRemove, boardSave } from "../module/boardReducer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../components/Header/Header";
+import PostDetail from "../components/postDetail/postDetail";
 
 export default function Container() {
   // State
@@ -15,30 +16,20 @@ export default function Container() {
     boardContent: "",
   });
 
-  // 함수형 컴포넌트에서 dispatch 를 사용할 수 있게 해줌
   const dispatch = useDispatch();
 
-  // onRemove 와 onSave 는 Action 을 dispatch 하는 함수
   const onRemove = (boardId) => dispatch(boardRemove(boardId));
   const onSave = (saveData) => dispatch(boardSave(saveData));
 
-  // reducer state 의 selectRowData field 를 가져온 뒤 subscribe(구독)
   const { selectRowData } = useSelector((state) => state.boardReducer);
 
-  // User Function
-  const onRowClick = (boardId) => {
-    // dispatch 를 하고,
-    dispatch(boardSelectRow(boardId));
-
-    // inputData 에 selectRowData 의 값을 반영
-    if (JSON.stringify(selectRowData) !== "{}") {
-      setInputData({
-        boardId: selectRowData.boardId,
-        boardTitle: selectRowData.boardTitle,
-        boardContent: selectRowData.boardContent,
-      });
-    }
-  };
+  if (JSON.stringify(selectRowData) !== "{}") {
+    setInputData({
+      boardId: selectRowData.boardId,
+      boardTitle: selectRowData.boardTitle,
+      boardContent: selectRowData.boardContent,
+    });
+  }
 
   const changeInput = (e) => {
     setInputData({
@@ -55,7 +46,6 @@ export default function Container() {
     });
   };
 
-  // reducer state 의 boards field 를 가져온뒤 subscribe(구독)
   const { boards } = useSelector((state) => state.boardReducer);
 
   return (
@@ -63,7 +53,7 @@ export default function Container() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <Header/>
+            <Header />
             <S.Main>
               <span>
                 <table>
@@ -78,7 +68,6 @@ export default function Container() {
                       boardTitle={row.boardTitle}
                       boardContent={row.boardContent}
                       onRemove={onRemove}
-                      onRowClick={onRowClick}
                     />
                   ))}
                 </table>
@@ -92,6 +81,9 @@ export default function Container() {
               inputData={inputData}
               resetForm={resetForm}
             />
+          </Route>
+          <Route path="/detail/:boardId">
+            <PostDetail />
           </Route>
         </Switch>
       </BrowserRouter>

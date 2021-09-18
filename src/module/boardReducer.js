@@ -26,31 +26,16 @@ const initialState = {
     boards: [
         {
             boardId: 1,
-            boardTitle: '제목1',
-            boardContent: '내용내용내용1'
+            boardTitle: '엔트리 프론트엔드 인턴과제 게시판1',
+            boardContent: '내용'
         },
         {
             boardId: 2,
-            boardTitle: '제목2',
-            boardContent: '내용내용내용2'
-        },
-        {
-            boardId: 3,
-            boardTitle: '제목3',
-            boardContent: '내용내용내용3'
-        },
-        {
-            boardId: 4,
-            boardTitle: '제목4',
-            boardContent: '내용내용내용4'
-        },
-        {
-            boardId: 5,
-            boardTitle: '제목5',
-            boardContent: '내용내용내용5'
+            boardTitle: '엔트리 프론트엔드 인턴과제 게시판2',
+            boardContent: '내용'
         }
     ],
-    lastId: 5,
+    lastId: 2,
     selectRowData: {}
 }
 

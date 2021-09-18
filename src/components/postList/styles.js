@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Tr = styled.tr`
   border-bottom: 1px solid #444444;
   font-size: 20px;
+  text-decoration: none;
   .numbers {
     display: flex;
     justify-content: center;
@@ -16,5 +17,5 @@ export const Tr = styled.tr`
   .contents {
     width: 180px;
     border-left: 1px solid #444444;
-  }
+  } 
 `;

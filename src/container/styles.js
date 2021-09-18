@@ -21,6 +21,9 @@ export const Main = styled.main`
         width: 180px;
         border-left: 1px solid #444444;
       }
+      .number:visited {
+        color: #000000;
+      }
     }
   }
 `;
