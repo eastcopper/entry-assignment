@@ -10,7 +10,7 @@ import PostDetail from "../components/postDetail/postDetail";
 
 export default function Container() {
   // State
-  let [inputData, setInputData] = useState({
+  const [inputData, setInputData] = useState({
     boardId: "",
     boardTitle: "",
     boardContent: "",
